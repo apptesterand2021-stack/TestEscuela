@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de Proyecto Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="main-menu">
+        <button onclick="navigate('home')">Inicio</button>
+        <button onclick="navigate('about')">Conócenos</button>
+        <button onclick="navigate('products')">Productos</button>
+        <button onclick="navigate('register')">Registro</button>
+        <button onclick="navigate('contact')">Contacto</button>
+    </nav>
+
+    <main class="main-content">
+        <div id="form-container" class="blue-container">
+            <h3>Buscar Registro</h3>
+            <form id="search-form" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <label for="web-url">Web:</label>
+                    <input type="text" id="web-url" value="https://example.com/api/register">
+                </div>
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" value="Juan">
+                </div>
+                <div class="form-group">
+                    <label for="surname">Apellido:</label>
+                    <input type="text" id="surname" value="Pablo">
+                </div>
+                <button type="submit" id="submit-btn">Registrar</button>
+            </form>
+        </div>
+
+        <div id="content-display" class="dynamic-content" style="display: none;">
+            <h2 id="content-title"></h2>
+            <p id="content-body"></p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
